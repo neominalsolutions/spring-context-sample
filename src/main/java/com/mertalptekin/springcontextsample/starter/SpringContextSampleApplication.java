@@ -1,13 +1,14 @@
-package com.mertalptekin.springcontextsample;
+package com.mertalptekin.springcontextsample.starter;
 
+import com.mertalptekin.springcontextsample.Product;
 import com.mertalptekin.springcontextsample.services.IProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.mertalptekin.springcontextsample"})
+// uygulmayı ayrı bir oaket yaptığımızda component taramasını nerede yapacağına dair bir fikri yok. bu sebeple bu işlemi yaptık streotype tüm bean yapılarını ana paket üzerinden register ettik.
 public class SpringContextSampleApplication {
 
 
